@@ -19,13 +19,7 @@ ENV/
 .env.production
 
 # PostgreSQL data
-postgres/
-postgres_data/
-postgre/
 postgre/postgres_data/
-data/
-db_data/
-postgresql_data/
 
 # Testing
 .pytest_cache/

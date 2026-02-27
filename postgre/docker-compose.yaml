@@ -1,0 +1,17 @@
+services:
+  db:
+    container_name: local_db
+    image: postgres:15
+    ports:
+      - "54322:5432"
+    environment:
+      - POSTGRES_PASSWORD=K9z-pFB-7tW-vAU
+      - POSTGRES_DB=postgres
+      - POSTGRES_USER=postgres
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U postgres"]
+      interval: 5s
+      timeout: 5s
+      retries: 5
+    volumes:
+      - ./postgres_data:/var/lib/postgresql/data
