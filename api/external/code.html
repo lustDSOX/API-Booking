@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <title>Ваш одноразовый код · API Booking</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background-color: #111111;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
+    }
+    .page {
+      padding: 24px 8px;
+    }
+    .wrap {
+      max-width: 620px;
+      margin: 0 auto;
+    }
+    .card {
+      background-color: #f7f7f7;
+      border-radius: 8px;
+      border: 1px solid #dadada;
+      box-shadow: 0 18px 45px rgba(0,0,0,0.35);
+      width: 100%;
+      border-collapse: collapse;
+    }
+    .card-header {
+      padding: 18px 22px 10px 22px;
+      background: #f2f2f2;
+      border-bottom: 1px dashed #000000;
+    }
+    .tagline {
+      font-size: 11px;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: #555555;
+    }
+    .order-title {
+      margin-top: 10px;
+      font-size: 22px;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: #000000;
+      font-weight: 700;
+    }
+    .date-chip {
+      margin-top: 6px;
+      display: inline-block;
+      padding: 3px 9px;
+      font-size: 11px;
+      border-radius: 999px;
+      background: #000000;
+      color: #ffffff;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+    .card-body {
+      padding: 20px 22px 8px 22px;
+      font-size: 14px;
+      line-height: 1.6;
+      color: #111111;
+    }
+    .card-body p {
+      margin: 0 0 14px 0;
+    }
+    .label {
+      font-size: 11px;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: #555555;
+    }
+    .divider {
+      margin: 18px 0 10px 0;
+      border-top: 1px dashed #000000;
+      border-bottom: 1px dashed #000000;
+      padding: 6px 0;
+      font-size: 11px;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: #444444;
+    }
+    .code-box {
+      margin: 18px 0 10px 0;
+      text-align: center;
+    }
+    .code {
+      display: inline-block;
+      padding: 14px 32px;
+      border-radius: 8px;
+      border: 1px dashed #000000;
+      background-color: #f0f0f0;
+      font-size: 32px;
+      letter-spacing: 10px;
+      font-weight: 700;
+      color: #000000;
+    }
+    .danger {
+      font-size: 12px;
+      line-height: 1.7;
+      color: #222222;
+    }
+    .danger b {
+      font-weight: 700;
+    }
+    .card-footer {
+      padding: 14px 22px 16px 22px;
+      background: #f2f2f2;
+      border-top: 1px dashed #000000;
+      font-size: 11px;
+      color: #444444;
+    }
+    .footer-left {
+      text-transform: uppercase;
+      letter-spacing: 0.18em;
+    }
+    .footer-right {
+      text-align: right;
+      font-size: 12px;
+    }
+    .small-note {
+      margin-top: 10px;
+      max-width: 620px;
+      color: #8b8b8b;
+      font-size: 11px;
+      line-height: 1.5;
+    }
+    @media (max-width: 640px) {
+      .card-header,
+      .card-body,
+      .card-footer {
+        padding-left: 16px !important;
+        padding-right: 16px !important;
+      }
+      .code {
+        font-size: 28px;
+        letter-spacing: 8px;
+        padding: 12px 24px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="page">
+    <div class="wrap">
+      <table class="card" role="presentation" cellspacing="0" cellpadding="0" border="0">
+        <tr>
+          <td class="card-header">
+            <div class="tagline">
+              api booking · безопасность
+            </div>
+            <div class="order-title">
+              one-time code
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td class="card-body">
+            <p>Здравствуйте!</p>
+            <p>
+              Вы (или кто-то другой) запросили одноразовый код для подтверждения действия
+              в системе <span style="font-weight:700;">API Booking</span>.
+            </p>
+
+            <div class="divider">
+              verification code
+            </div>
+
+            <p class="label" style="margin-bottom:6px;">ваш код</p>
+            <div class="code-box">
+              <div class="code">{{otp_code}}</div>
+            </div>
+
+            <p class="danger">
+              <b>Важно:</b> никому не сообщайте этот код, даже сотрудникам поддержки.
+              Он действителен в течение <b>{{otp_ttl}} минут </b> и может быть использован
+              только один раз.
+            </p>
+
+            <p style="font-size:12px; color:#333333; margin-top:12px;">
+              Если вы не запрашивали этот код, просто проигнорируйте и удалите это письмо.
+            </p>
+          </td>
+        </tr>
+        <tr>
+          <td class="card-footer">
+            <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%">
+              <tr>
+                <td class="footer-left">
+                  api booking
+                </td>
+                <td class="footer-right">
+                  ★ stay safe
+                </td>
+              </tr>
+            </table>
+          </td>
+        </tr>
+      </table>
+
+      <div class="small-note">
+        Это автоматическое сообщение, отвечать на него не нужно.
+      </div>
+    </div>
+  </div>
+</body>
+</html>

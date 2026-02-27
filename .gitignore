@@ -1,0 +1,110 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+
+# Virtual environments
+venv/
+env/
+ENV/
+.venv/
+.venv/
+
+# Environment variables
+.env
+.env.local
+.env.*.local
+.env.production
+
+# PostgreSQL data
+postgres/
+postgres_data/
+postgre/
+postgre/postgres_data/
+data/
+db_data/
+postgresql_data/
+
+# Testing
+.pytest_cache/
+.coverage
+coverage.xml
+htmlcov/
+.tox/
+tests/__pycache__/
+
+# Logs
+*.log
+logs/
+*.log.*
+
+# IDE/Editors
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.vscode-test/
+
+# OS generated files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Runtime data
+pids/
+*.pid
+*.seed
+*.pid.lock
+
+# FastAPI specific
+instance/
+.webassets-cache/
+
+# Database
+*.db
+*.sqlite
+*.sqlite3
+
+# Distribution / packaging
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+pip-wheel-metadata/
+share/python-wheels/
+*.egg-info/
+.installed.cfg
+*.eggs
+
+# Dependency directories
+pipenv/
+Pipfile.lock
+
+# PyInstaller
+build/
+dist/
+*.spec
+
+# mypy
+.mypy_cache/
+.dmypy.json
+dmypy.json
+
+# Debugging tools
+debug/
